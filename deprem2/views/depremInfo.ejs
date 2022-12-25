@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Şehrin Depremleri</h1>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Plaka Kodu</th>
+                <th scope="col">Şehir Adı</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">Saat</th>
+                <th scope="col">Şiddet</th>
+                <th scope="col">Can Kaybı</th>
+                <th scope="col">Hasarlı Bina</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(element=> { %>
+                <tr scope="row">
+                    <td>
+                        <%= element.plakaKodu %>
+                    </td>
+                    <td>
+                        <%= element.sehirAdi %>
+                    </td>
+                    <td>
+                        <%= element.tarih %>
+                    </td>
+                    <td>
+                        <%= element.saat %>
+                    </td>
+                    <td>
+                        <%= element.siddet %>
+                    </td>
+                    <td>
+                        <%= element.canKaybi %>
+                    </td>
+                    <td>
+                        <%= element.hasarliBina %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+        
+    </table>
+
+</body>
